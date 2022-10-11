@@ -1,0 +1,50 @@
+#include <stdio.h>
+int main()
+{
+    int age[10],i,size;
+    printf("Enter size of the array :\n ");
+    scanf("%d", &size);
+    printf("Enter employee age : \n");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d",&age[i]);
+    }
+    sort(age,size);
+    
+
+ 
+}
+int sort(int age[],int size)
+{
+    int i,j;
+    int temp;
+    for (i = 0; i<size; i++) 
+        {
+            for (j = i + 1; j<size; j++)
+            {
+                if (age[i]>age[j]) 
+                {
+                    temp=  age[i];
+                    age[i] = age[j];
+                    age[j] = temp;
+ 
+                }
+ 
+            }
+ 
+        }
+        printf("The employee age inorder: %d \n");
+        for (i = 0; i < size; ++i)
+        {
+            printf("%d\n", age [i]);
+        }
+        if(age[0]==0)
+        {
+            printf("Error! the employee  age cannot be zero\n");
+        }
+        else 
+        {
+            printf("the lower age of employee : %d \n",age[0]);
+        }
+        printf("upper age of the employee  : %d ",age[size-1]);
+}
