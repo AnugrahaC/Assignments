@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    int cloth1=36; 
+    int cloth2=24;
+    int min=0;
+    int width =0;
+    
+    if(cloth1<cloth2)
+    {
+		
+		min = cloth1;
+	
+	}
+	
+	else
+
+	{
+
+		min = cloth2;
+	}
+	
+    for(i=1; i<=min; i++)
+    {
+    
+        if(cloth1%i==0 && cloth2%i==0)
+        {
+            width = i;
+        }
+    }
+
+    printf("equal width of pieces of cloth %d and %d = %d\n", cloth1, cloth2, width);
+
+    return 0;
+}
